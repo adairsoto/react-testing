@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import { MuiMode } from './components/mui/mui-node'
+import { AppProviders } from './components/providers/app-providers'
+import { Users } from './components/user/Users'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        </a>
-        Learn React
-      </header>
-    </div>
-  );
+    <AppProviders>
+      <div className="App">
+        <MuiMode />
+        <Users />
+      </div>
+    </AppProviders>
+  )
 }
 
-export default App;
+export default App
